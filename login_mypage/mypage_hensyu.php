@@ -1,13 +1,13 @@
 <?php
-mb_internal_encoding("utf8");
+    mb_internal_encoding("utf8");
 
-//セッションスタート
-session_start();
+    //セッションスタート
+    session_start();
 
-//mypage.phpからの導線以外は、『login_error.php』へリダイレクト
-if(empty($_POST['from_mypage'])){
-    header("Location:login_error.php");
-}
+    //mypage.phpからの導線以外は、『login_error.php』へリダイレクト
+    if(empty($_POST['from_mypage'])){
+        header("Location:login_error.php");
+    }
 ?>
 
 <!doctype HTML>

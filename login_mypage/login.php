@@ -1,14 +1,13 @@
 <?php
-mb_internal_encoding("utf8");
+    mb_internal_encoding("utf8");
 
-//セッションスタート
-session_start();
+    //セッションスタート
+    session_start();
 
-//ログイン時にアクセスした場合は、『mypage.php』にリダイレクト
-if(isset($_SESSION['id'])){
-    header("Location:mypage.php");
-}
-
+    //ログイン時にアクセスした場合は、『mypage.php』にリダイレクト
+    if(isset($_SESSION['id'])){
+        header("Location:mypage.php");
+    }
 ?>
 
 <!doctype HTML>

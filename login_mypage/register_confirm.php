@@ -1,15 +1,15 @@
 <?php
-mb_internal_encoding("utf8");
+    mb_internal_encoding("utf8");
 
-//仮保存されたファイル名で画像ファイルを取得（サーバーへ仮アップデートされたディレクトリとファイル名）
-$temp_pic_name =$_FILES['picture']['tmp_name'];
+    //仮保存されたファイル名で画像ファイルを取得（サーバーへ仮アップデートされたディレクトリとファイル名）
+    $temp_pic_name =$_FILES['picture']['tmp_name'];
 
-//元のファイル名で画像ファイルを取得。事前に画像を格納する「image」という名前の画像フォルダを作成すること
-$original_pic_name = $_FILES['picture']['name'];
-$path_filename = './image/'.$original_pic_name;
+    //元のファイル名で画像ファイルを取得。事前に画像を格納する「image」という名前の画像フォルダを作成すること
+    $original_pic_name = $_FILES['picture']['name'];
+    $path_filename = './image/'.$original_pic_name;
 
-//仮保存のファイル名を、imageフォルダに、元のファイル名で移動させる。
-move_uploaded_file($temp_pic_name,'./image/'.$original_pic_name);
+    //仮保存のファイル名を、imageフォルダに、元のファイル名で移動させる。
+    move_uploaded_file($temp_pic_name,'./image/'.$original_pic_name);
 ?>
 
 <!doctype HTML>

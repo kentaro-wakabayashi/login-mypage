@@ -1,5 +1,10 @@
 <?php
-session_start();
-session_destroy();
-header("Location:login.php");
+    //セッションスタート
+    session_start();
+
+    //セッションの初期化
+    session_destroy();
+
+    //『login.php』にリダイレクト
+    header("Location:login.php");
 ?>
